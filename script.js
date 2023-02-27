@@ -46,6 +46,14 @@ while (restartGame){ // Game restarts as long as the restartGame variable has a 
     // Continues looping until the user guesses the correct number or runs out of attempts
     while (attempts >= 0){
 
+        // Displays number/answer when a code word is entered
+        if (guess === `Watermelon`){
+            alert(`The number is ${randomNum}`);
+    
+            // Prompts the user to enter another guess
+            guess = prompt(`Please enter a guess from 1 to ${rangeNum}. You have ${attempts} attempt(s) left:`);
+        }
+
         guess = parseInt(guess); // Attempts to convert the user's guess into a number
 
         // Verifies the user's guess is a number greater than zero and less than or equal to the range they set
